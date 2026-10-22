@@ -5,7 +5,6 @@ import no.hvl.dat100.javel.oppgave3.Customer;
 public class Customers {
 
 
-    Scanner input = new Scanner(System.in);
     private Customer[] customers;
     int amount;
 
