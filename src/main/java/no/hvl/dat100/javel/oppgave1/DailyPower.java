@@ -10,8 +10,8 @@ int i=0;
             System.out.print(pris +";");}
         if (i%6==0){
             System.out.println();
+            i++;
         }
-i++;
     }
 
     // b) print power usage during a day
@@ -22,8 +22,8 @@ i++;
             System.out.print(hours+";");}
         if (i%6==0){
             System.out.println();
+            i++;
         }
-        i++;
     }
 
     // c) compute power usage for a single day
@@ -56,7 +56,7 @@ int i=0;
     private static double getSupport(double usage, double price) {
         price -= THRESHOLD;
         double support = 0;
-if (price>0){
+if (price>support){
     support = price*PERCENTAGE*usage;
         }
         return support;
