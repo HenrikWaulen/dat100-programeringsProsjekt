@@ -18,11 +18,11 @@ public class MonthMain {
         System.out.println("==============");
         System.out.println();
 
-        System.out.printf("a)\n");
+        System.out.printf("a)");
         MonthlyPower.print_PowerUsage(power_usage_month);
         System.out.println("\n");
-/*
-        System.out.printf("b)\n");
+
+        System.out.printf("b)");
         MonthlyPower.print_PowerPrices(power_prices_month);
         System.out.println("\n");
 
@@ -31,11 +31,13 @@ public class MonthMain {
             MonthlyPower.computePowerUsage(power_usage_month));
         System.out.println("\n");
 
-        System.out.printf("d)\n");
-        System.out.printf("%.2f Nok %n",
-            MonthlyPower.exceedThreshold(power_usage_month, 1));
-        System.out.println("\n");
-    
+        System.out.printf("d)%n");
+        System.out.printf("Hytte (1000 kWh): %b%n",
+            MonthlyPower.exceedThreshold(power_usage_month, 1000));
+        System.out.printf("Primærbolig (5000 kWh): %b%n",
+            MonthlyPower.exceedThreshold(power_usage_month, 5000));
+        System.out.println();
+  
         System.out.printf("e)\n");
         System.out.printf("%.2f Nok %n",
             MonthlyPower.computeSpotPrice(power_usage_month, power_prices_month));
@@ -45,7 +47,7 @@ public class MonthMain {
         System.out.printf("%.2f Nok %n",
             MonthlyPower.computePowerSupport(power_usage_month, power_prices_month));
         System.out.println("\n");
-
+/*
         System.out.printf("g)\n");
         System.out.printf("%.2f Nok %n",
             MonthlyPower.computeNorgesPrice(power_usage_month));

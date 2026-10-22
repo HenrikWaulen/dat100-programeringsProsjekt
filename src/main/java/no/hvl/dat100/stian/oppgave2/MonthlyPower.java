@@ -19,9 +19,15 @@ public class MonthlyPower {
 
     // b) print power prices for a month
     public static void print_PowerPrices(double[][] prices) {
+        
+        for (int i = 0; i<prices.length; i++){
 
-        // TODO
+            System.out.println("\n\nDay: " + (i+1));
 
+            for (int j = 0; j<prices[i].length; j++){
+                System.out.printf("%.2f kr ",prices[i][j]);
+            }
+        }
     }
 
     // c) compute total power usage for a month
@@ -29,7 +35,11 @@ public class MonthlyPower {
 
         double sum = 0;
 
-        // TODO
+        for (int i = 0; i<usage.length; i++){
+            for (int j = 0; j<usage[i].length; j++){
+                sum += usage[i][j];
+            }
+        }
 
         return sum;
     }
@@ -37,12 +47,24 @@ public class MonthlyPower {
     // d) determine whether a given threshold in powerusage for the month has been exceeded
     public static boolean exceedThreshold(double[][] powerusage, double threshold) {
 
-        boolean exceeded = false;
         double usage = 0;
+        int i = 0;
+        int j = 0;
 
-        // TODO
+        while (i < powerusage.length) {
+            while (j < powerusage[i].length) {
+                usage += powerusage[i][j];
 
-        return exceeded;
+                if (usage > threshold) {
+                    return true;
+                }
+
+                j++;
+            }
+            j = 0;
+            i++;
+        }
+        return false;
     }
 
     // e) compute spot price
@@ -50,7 +72,11 @@ public class MonthlyPower {
 
         double price = 0;
 
-        // TODO
+        for (int i = 0; i<usage.length; i++){
+            for (int j = 0; j<usage[i].length; j++){
+                price += usage[i][j] * prices[i][j];
+            }
+        }
 
         return price;
     }
