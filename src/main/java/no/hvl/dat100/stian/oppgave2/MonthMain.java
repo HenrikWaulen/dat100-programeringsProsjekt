@@ -1,8 +1,5 @@
 package no.hvl.dat100.stian.oppgave2;
 
-import no.hvl.dat100.stian.oppgave1.DailyPower;
-import no.hvl.dat100.stian.oppgave1.DayPowerData;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class MonthMain {
@@ -47,11 +44,10 @@ public class MonthMain {
         System.out.printf("%.2f Nok %n",
             MonthlyPower.computePowerSupport(power_usage_month, power_prices_month));
         System.out.println("\n");
-/*
+
         System.out.printf("g)\n");
         System.out.printf("%.2f Nok %n",
             MonthlyPower.computeNorgesPrice(power_usage_month));
         System.out.println("\n");
-        */
     }    
 }
