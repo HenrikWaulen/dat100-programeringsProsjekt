@@ -6,7 +6,6 @@ public class Invoices {
 
         for (Invoice invoice : invoices) {
             invoice.computeAmount();
-
             System.out.println("========================");
             invoice.printInvoice();
             System.out.println("========================");
